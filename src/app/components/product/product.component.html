@@ -1,0 +1,11 @@
+<h1 class="movieProducts"> - MOVIE PRODUCTS -</h1>
+<br>
+<div class="movies" *ngFor="let p of products"> 
+    <img [src]="p.imageUrl" alt="Movie"/>
+    <h1>{{p.name}}</h1>
+    <p>Description:<p>
+    <p class="description">{{p.description}}. Made year:{{p.year}}</p>
+    <h3>Made in store: | {{p.added | date:'yyyy-MM-dd'}} |</h3>
+<div class ="btn">
+    <button (click)="addToCheckout(p)">Buy:{{p.price}} Kr</button>
+</div>

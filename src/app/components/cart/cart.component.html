@@ -1,0 +1,79 @@
+<section><div *ngFor="let cartItem of checkoutCart; let i = index">
+<h2>{{cartItem.name}}</h2>
+<img src="{{cartItem.imageUrl}}">
+<h3>Köp: {{cartItem.price}} Kr</h3>
+<button class="btnRemove" (click)="removeButton(i)">Remove</button>
+</div>
+</section>
+
+<fieldset>
+<legend>Formulär</legend>
+<form [formGroup]="userForm" (submit)="saveNewUser()">
+    <label>Firstname: </label>
+    <input type="text" formControlName="firstName"/>
+    <br><br>
+    <label>Lastname: </label>
+    <input type="text" formControlName="lastName"/>
+    <br><br>
+    <label>Email: </label>
+    <input type="text" formControlName="email"/>
+    <br><br>
+    <label>Address: </label>
+    <input type="text" formControlName="address"/>
+    <br><br>
+    <label>City: </label>
+    <input type="text" formControlName="city"/>
+    <br><br>
+    <label>Country: </label>
+    <br>
+<select class="country" type="text" name="country" formControlName="country">
+    <option value="andorra">Andorra</option>
+    <option value="albanien">Albanien</option>
+    <option value="belarus">Belarus</option>
+    <option value="bulgarien">Bulgarien</option>
+    <option value="danmark">Danmark</option>
+    <option value="estland">Estland</option>
+    <option value="findland">Findland</option>
+    <option value="frankrike">Frankrike</option>
+    <option value="grekland">Grekland</option>
+    <option value="italien">Italien</option>
+    <option value="irland">Irland</option>
+    <option value="kroatien">Kroatien</option>
+    <option value="kosovo">Kosovo</option>
+    <option value="lettland">Lettland</option>
+    <option value="luxemburg">Luxemburg</option>
+    <option value="malta">Malta</option>
+    <option value="monaco">Monaco</option>
+    <option value="norge">Norge</option>
+    <option value="nederländerna">Nederländerna</option>
+    <option value="polen">Polen</option>
+    <option value="portugal">Portugal</option>
+    <option value="rumänien">Rumänien</option>
+    <option value="sverige">Sverige</option>
+    <option value="spanien">Spanien</option>
+    <option value="tyskland">Tyskland</option>
+    <option value="tjeckien">Tjeckien</option>
+    <option value="ungern">Ungern</option>
+    <option value="ukraina">Ukraina</option>
+    <option value="österrike">Österrike</option>
+</select>
+<br><br>
+<label>Payment:</label>
+<select id="payment" type="text" name="payment" formControlName="payment">
+    <option value="klarna">Klarna</option>
+    <option value="mastercard">MasterCard</option>
+    <option value="visa">VISA</option>
+    <option value="paypal">PayPal</option>
+    <option value="americanexpress">AMERICAN EXPRESS</option>
+</select>
+<br><br>
+<h4>Complete the form to place an order.</h4>
+<button type="submit" [disabled]="!userForm.valid || checkoutCart.length < 1">Place the order</button>
+</form></fieldset>
+
+<p>
+    {{userForm.value|json}}
+</p>
+
+
+

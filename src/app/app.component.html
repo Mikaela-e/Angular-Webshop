@@ -1,0 +1,27 @@
+<header>
+<p>
+its time for  
+<span>
+movie night
+</span>
+&mdash; welcome &mdash;
+</p>
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a class="navBar" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li>
+            <a class="navBar" routerLink ="/product/:id" routerLinkActive="active">Products</a>
+        </li>
+        <li>
+            <a class="navBar" routerLink="/cart" routerLinkActive="active">Cart</a>
+        </li>
+        <li>
+            <a class="navBar" routerLink="/admin" routerLinkActive="active">Admin</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

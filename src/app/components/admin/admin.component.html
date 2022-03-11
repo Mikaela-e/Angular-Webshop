@@ -1,0 +1,10 @@
+<div *ngIf="orders.length == 0">
+  <h1>Sorry, but you haven't place any orders!!</h1>
+</div>
+<div *ngFor="let order of orders">
+  <p>Order id: {{ order.id }}</p>
+  <p>Customer: {{order.createdBy}}</p>
+  <p>Price :{{order.totalPrice}}</p>
+  <p>Movie: {{order.created | date:'yyyy-MM-dd'}}</p>
+<button (click)="deleteTheOrders(order.id)">Delete order</button>
+</div>

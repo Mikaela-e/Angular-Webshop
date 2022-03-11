@@ -1,0 +1,68 @@
+.movieProducts{
+    color: #333;
+    text-align: center;
+    display: block;
+}
+.movies{
+    width: 300px;
+    margin: 70px;
+    margin-top: -10px;
+    display:inline-block;
+    border-radius: 10px;
+img{
+    min-width: 200px;
+    max-height: 300px;
+    margin: 50px;
+    display: inline-block;
+    margin-right: 70px;
+    justify-content: center;
+    border: 3px solid black;
+}
+h1{
+    font-size: 20px;
+    margin: 50px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 10px;
+    text-shadow:  1px 1px 10px #333; 
+}
+.price{
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    display: block;
+    justify-content: center;
+    border-radius: 3px;
+    width: 50px;
+}
+h3{
+    font-size: 15px;
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.description{
+    font-size: 15px;
+    border: 25px solid white;
+}
+}
+button{
+    margin: 30px;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bolder;
+    &:hover{
+        background-color: #4dd164;
+    }
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
